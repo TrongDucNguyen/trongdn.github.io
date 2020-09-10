@@ -1,0 +1,42 @@
+
+<form name="myForm" id="myForm" onsubmit="return validateForm()">
+    Candidate: <br />
+    <input type="text" id="candidate" />
+    <input type="button" id="addCand" value="Add Candidate" />
+    <br/>
+</form>
+
+<br>
+
+<input type="button" id="result" value="Show Prediction" />
+
+<div style = "Visibility = hidden">
+<form  id="form1" method="post" action="" target = "_parent" style="display: none" ><br><br>
+    <div id="demo" >
+  
+      <table width="660px" align="center" style="box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 100);">
+        <tr>
+          <td colspan=1>Your predicted bf is this ugly looking guy. who else are you looking for :-|</td>
+        </tr>
+        <tr>
+          <td><img src="./Trong Nguyen_files/avatar.jpg" class="img-responsive" alt=""></td>
+        </tr>
+      </table>
+  
+    </div>
+</form>
+
+<script>
+document.getElementById("addCand").onclick = function() {
+	var form = document.getElementById("myForm");
+	var input = document.createElement("input");
+	input.type = "text";
+	var br = document.createElement("br");
+    form.appendChild(input);
+    form.appendChild(br);
+}
+
+document.getElementById("result").onclick = function() {
+	document.getElementById('form1').style.display = 'block';
+}
+</script>
